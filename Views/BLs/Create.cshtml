@@ -1,0 +1,40 @@
+﻿@model TP02SWII.Models.BL
+
+@{ ViewData["Title"] = "Criar"; }
+
+<div>
+    <a asp-action="Index" class="btn btn-default">Voltar</a>
+</div>
+
+
+<h2>Criando BLs</h2>
+
+<h4>BL</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Number" style="color:red" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consignee" style="color:red" class="control-label"></label>
+                <input asp-for="Consignee" class="form-control" />
+                <span asp-validation-for="Consignee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ship" style="color:red" class="control-label"></label>
+                <input asp-for="Ship" class="form-control" />
+                <span asp-validation-for="Ship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Criar" class="btn btn-info" />
+            </div>
+        </form>
+    </div>
+</div>
+
+

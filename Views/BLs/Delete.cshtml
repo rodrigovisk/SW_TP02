@@ -1,0 +1,38 @@
+﻿@model TP02SWII.Models.BL
+
+@{
+    ViewData["Title"] = "Apagando o BL";
+}
+
+<h2>Deletando o BL</h2>
+
+<div>
+    <h4>BL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Consignee)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Consignee)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ship)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ship)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="BLId" />
+        <input type="submit" value="APAGAR" class="btn btn-primary" /> 
+        <a  class="btn btn-danger" asp-action="Index">Voltar</a>
+    </form>
+</div>

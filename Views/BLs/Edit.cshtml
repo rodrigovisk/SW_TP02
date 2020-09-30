@@ -1,0 +1,42 @@
+﻿@model TP02SWII.Models.BL
+
+@{
+    ViewData["Title"] = "Editar";
+}
+
+<div>
+    <a class="btn btn-warning" asp-action="Index">Voltar</a>
+</div>
+
+<h2>Editando BL</h2>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="BLId" />
+            <div class="form-group">
+                <label asp-for="Number" style="color:red" class="control-label"></label>
+                <input asp-for="Number" class="form-control" />
+                <span asp-validation-for="Number" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Consignee" style="color:red" class="control-label"></label>
+                <input asp-for="Consignee" class="form-control" />
+                <span asp-validation-for="Consignee" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ship" style="color:red" class="control-label"></label>
+                <input asp-for="Ship" class="form-control" />
+                <span asp-validation-for="Ship" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-danger" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

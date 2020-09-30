@@ -1,0 +1,53 @@
+﻿@model IEnumerable<TP02SWII.Models.BL>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>BL</h2>
+
+<p>
+    <a asp-action="Create">Novo</a>
+</p>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Consignee)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ship)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BLId)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Consignee)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ship)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BLId)
+            </td>
+            <td>
+                <a class="btn btn-warning" asp-action="Edit" asp-route-id="@item.BLId">Editar</a> 
+                <a class="btn btn-default" asp-action="Details" asp-route-id="@item.BLId">Ver</a> 
+                <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.BLId">Deletar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
